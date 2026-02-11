@@ -9,13 +9,13 @@ Ejercicios del curso de Programación Orientada a Objetos con Python del Institu
 Clonar el repositorio
 
 ```bash
-git clone https://github.com/toastycoder0/oop-python.git
+git clone https://github.com/toastycoder0/poo-python.git
 ```
 
 Entrar al directorio
 
 ```bash
-cd oop-python
+cd poo-python
 ```
 
 ## Ejercicios
