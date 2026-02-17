@@ -12,7 +12,7 @@ lista = []
 
 while True:
     print("""
-Opciones: 
+Opciones (listas): 
 1) Agregar elemento
 2) Eliminar elemento
 3) Mostrar elementos
