@@ -26,7 +26,6 @@ Opciones:
     elif opcion == 2:
         if len(lista) > 0:
             elemento_eliminado = lista.pop()
-            print(f"Elemento eliminado: {elemento_eliminado}")
         else:
             print("La pila está vacía")
     elif opcion == 3:
