@@ -12,7 +12,7 @@ lista = []
 
 while True:
     print("""
-Opciones: 
+Opciones (colas): 
 1) Agregar elemento
 2) Eliminar elemento
 3) Mostrar elementos
@@ -26,7 +26,6 @@ Opciones:
     elif opcion == 2:
         if len(lista) > 0:
             elemento_eliminado = lista.pop(0)
-            print(f"Elemento eliminado: {elemento_eliminado}")
         else:
             print("La cola está vacía")
     elif opcion == 3:
