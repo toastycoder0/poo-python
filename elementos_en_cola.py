@@ -22,7 +22,7 @@ Opciones (colas):
 
     if opcion == 1:
         nuevo_elemento = int(input("Ingresa el nuevo elemento: "))
-        lista.append(nuevo_elemento)
+        lista.insert(0, nuevo_elemento)
     elif opcion == 2:
         if len(lista) > 0:
             elemento_eliminado = lista.pop(0)
