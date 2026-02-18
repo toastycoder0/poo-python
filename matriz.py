@@ -11,9 +11,10 @@ columnas_a_crear = int(input("Ingresa el valor de columnas: "))
 
 matriz = []
 matriz_random = []
+matriz_combinada = []
 
 for numero_de_fila in range(filas_a_crear):
-    fila = []
+    fila_combinada = []
     fila_random = []
 
     for numero_de_columna in range(columnas_a_crear):
@@ -24,11 +25,25 @@ for numero_de_fila in range(filas_a_crear):
         )
         valor_random = random.randint(0, 100)
 
-        fila.append(valor)
+        fila_combinada.append(valor)
         fila_random.append(valor_random)
 
-    matriz.append(fila)
+    matriz.append(fila_combinada)
     matriz_random.append(fila_random)
+
+for numero_de_fila in range(filas_a_crear):
+    fila_combinada = []
+
+    for numero_de_columna in range(columnas_a_crear):
+        valor_combinado = (
+            matriz[numero_de_fila][numero_de_columna]
+            + matriz_random[numero_de_fila][numero_de_columna]
+        )
+        fila_combinada.append(valor_combinado)
+
+    matriz_combinada.append(fila_combinada)
+
 
 print(f"Matriz ingresada: {matriz}")
 print(f"Matriz random: {matriz_random}")
+print(f"Matriz combinada: {matriz_combinada}")
