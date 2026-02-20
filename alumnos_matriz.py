@@ -71,7 +71,7 @@ def mostrar_promedios():
         print("No hay alumnos registrados")
 
 
-def main():
+def menu():
     while True:
         print("""
 Opciones
@@ -100,4 +100,4 @@ Opciones
             print(f"La opción ingresada {opcion} no esta disponible")
 
 
-main()
+menu()
