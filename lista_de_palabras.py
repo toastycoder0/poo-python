@@ -27,12 +27,17 @@ palabras = [
 ]
 
 
-def eliminar():
-    pass
+def eliminar(palabra_a_eliminar):
+    if palabra_a_eliminar in palabras:
+        palabras.remove(palabra_a_eliminar)
+        print("La palabra fue eliminada correctamente")
+    else:
+        print(f"La palabra {palabra_a_eliminar} no existe en la lista")
 
 
 def mostrar():
-    pass
+    for palabra in palabras:
+        print(palabra)
 
 
 def contar(palabra_a_buscar):
@@ -74,9 +79,10 @@ todas las apariciones de la primera por la segunda en la lista
             modificar(palabra_a_buscar, palabra_a_modificar)
             print(palabras, "\n")
         elif opcion == 3:
-            pass
+            palabra_a_eliminar = input("Ingresa una palabra: ")
+            eliminar(palabra_a_eliminar)
         elif opcion == 4:
-            pass
+            mostrar()
         elif opcion == 5:
             print("Saliendo...")
             break
