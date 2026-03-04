@@ -65,14 +65,14 @@ todas las apariciones de la primera por la segunda en la lista
 
         if opcion == 1:
             palabra_a_buscar = input("Ingresa una palabra: ")
-            print(f"La palabra aparece {contar(palabra_a_buscar)} veces")
+            print(f"La palabra aparece {contar(palabra_a_buscar)} veces\n")
         elif opcion == 2:
             palabra_a_buscar = input("Ingresa una palabra: ")
             palabra_a_modificar = input(
                 f"Introduce la palabra por la que deseas modificar la palabra {palabra_a_buscar}: "
             )
             modificar(palabra_a_buscar, palabra_a_modificar)
-            print(palabras)
+            print(palabras, "\n")
         elif opcion == 3:
             pass
         elif opcion == 4:
