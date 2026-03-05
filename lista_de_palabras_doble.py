@@ -33,8 +33,10 @@ def palabras_solo_en_lista_dos():
 def principal():
     palabras = palabras_en_ambas()
     palabras_en_uno = palabras_solo_en_lista_uno()
+    palabras_en_dos = palabras_solo_en_lista_dos()
     print("Palabras en ambas: ", palabras)
     print("Palabras en lista uno: ", palabras_en_uno)
+    print("Palabras en lista dos: ", palabras_en_dos)
 
 
 principal()
