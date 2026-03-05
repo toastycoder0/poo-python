@@ -23,7 +23,11 @@ def palabras_solo_en_lista_uno():
 
 
 def palabras_solo_en_lista_dos():
-    pass
+    palabras_solo_en_lista_dos = []
+    for palabra in lista_dos:
+        if not palabra in lista_uno:
+            palabras_solo_en_lista_dos.append(palabra)
+    return palabras_solo_en_lista_dos
 
 
 def principal():
