@@ -8,6 +8,13 @@ class Reactangulo:
         self.__largo = largo
         self.__ancho = ancho
 
+    def __str__(self):
+        return f"""
+Largo: {self.__largo}
+Ancho: {self.__ancho}
+Area: {self.__largo * self.__ancho}
+        """
+
     def consultarLargo(self):
         return self.__largo
 
@@ -29,13 +36,55 @@ rectangulo_dos = Reactangulo(8, 6)
 
 rectangulos = [rectangulo_uno, rectangulo_dos]
 
-for rectangulo in rectangulos:
-    indice = rectangulos.index(rectangulo)
-    print(f"""
+
+def crear_rectangulo():
+    print(f"Rectangulo {len(rectangulos) + 1}")
+    largo = int(input("Ingresa el valor del largo: "))
+    ancho = int(input("Ingresa el valor del ancho: "))
+    rectangulo_nuevo = Reactangulo(largo, ancho)
+    rectangulos.append(rectangulo_nuevo)
+
+
+def listar_rectangulos():
+    if len(rectangulos) > 0:
+        for rectangulo in rectangulos:
+            indice = rectangulos.index(rectangulo)
+            print(f"""
 ----------
 Rectangulo {indice + 1}
 ----------
-Largo:  {rectangulo.consultarLargo()}
-Ancho:  {rectangulo.consultarAncho()}
-Area:   {rectangulo.calcularArea()}
-    """)
+{rectangulo}
+            """)
+    else:
+        print("No hay rectangulos por mostrar")
+
+
+def mostrar_un_rectangulo():
+    numero_de_rectangulos = int(input("Ingresa el numero del rectangulo a consultar: "))
+
+
+def menu():
+    while True:
+        print("""
+Opciones
+1) Crear un triangulo
+2) Listar triangulos
+3) Obtener la información de un solo triangulo
+4) Eliminar triangulo
+5) Salir
+        """)
+        opcion = input("Ingresa una opción")
+
+        if opcion == "1":
+            crear_rectangulo()
+        elif opcion == "2":
+            listar_rectangulos()
+        elif opcion == "3":
+            pass
+        elif opcion == "4":
+            pass
+        elif opcion == "5":
+            print("Saliendo...")
+            break
+        else:
+            print(f"La opción {opcion} no es valida")
