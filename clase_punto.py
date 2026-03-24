@@ -1,5 +1,6 @@
 # pyright: reportRedeclaration=false
-import os
+from os import system
+from math import atan2, degrees, sqrt
 from multimethod import multimethod
 
 
@@ -38,6 +39,22 @@ class Punto2D:
     def modificar_y(self, valor):
         self.__y = valor
 
+    def suma(self, punto):
+        x = self.x + punto.x
+        y = self.y + punto.y
+        return Punto2D(x, y)
+
+    def resta(self, punto):
+        x = self.x - punto.x
+        y = self.y - punto.y
+        return Punto2D(x, y)
+
+    def modulo(self):
+        return sqrt(self.x**2 + self.y**2)
+
+    def angulo(self):
+        return degrees(atan2(self.y, self.x))
+
     def cuadrante(self):
         if self.__x > 0 and self.__y > 0:
             return 1
@@ -52,7 +69,7 @@ class Punto2D:
         return None
 
 
-os.system("clear")
+system("clear")
 
 punto_uno = Punto2D(2, 3)
 punto_dos = Punto2D(-3, 5)
@@ -60,6 +77,7 @@ punto_tres = Punto2D(-3, -5)
 punto_cuatro = Punto2D(3, -5)
 punto_cinco = Punto2D()
 punto_seis = Punto2D(3.3, 4.4)
+punto_suma = punto_uno.suma(punto_dos)
 
 print(punto_uno, "cuadrante", punto_uno.cuadrante())
 print(punto_dos, "cuadrante", punto_dos.cuadrante())
@@ -67,3 +85,4 @@ print(punto_tres, "cuadrante", punto_tres.cuadrante())
 print(punto_cuatro, "cuadrante", punto_cuatro.cuadrante())
 print(punto_cinco, "cuadrante", punto_cinco.cuadrante())
 print(punto_seis, "cuadrante", punto_seis.cuadrante())
+print(punto_suma, "cuadrante", punto_suma.cuadrante())
