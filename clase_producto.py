@@ -69,7 +69,7 @@ producto_dos = Producto("PS5", 11999.99)
 print(producto_uno)
 print(producto_dos)
 
-print("Stock del PS5 actualizado a 20\n")
+print("Stock del PS5 actualizado a 20 unidades disponibles\n")
 
 producto_dos.reabastecer(20)
 
