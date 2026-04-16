@@ -76,14 +76,17 @@ class Complejo:
             return NotImplemented
 
     def argumento(self):
+        angulo = 0
         if not isinstance(self.imaginario, Fraccion) and not isinstance(
             self.real, Fraccion
         ):
-            return degrees(atan2(self.real, self.imaginario))
+            angulo = degrees(atan2(self.imaginario, self.real))
         elif isinstance(self.imaginario, Fraccion) and isinstance(self.real, Fraccion):
-            return degrees(atan2(self.real.a_decimal(), self.imaginario.a_decimal()))
-        else:
-            return NotImplemented
+            angulo = degrees(atan2(self.imaginario.a_decimal(), self.real.a_decimal()))
+        if angulo < 0:
+            angulo += 360
+
+        return angulo
 
     def polar(self):
         return f"{self.modulo():.2f}∠{self.argumento():.2f}"
