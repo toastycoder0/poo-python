@@ -123,22 +123,3 @@ class Fraccion:
 
 fraccion_uno = Fraccion(1, 2)
 fraccion_dos = Fraccion(3, 4)
-
-print("Fracciones:")
-print("f1 =", fraccion_uno)
-print("f2 =", fraccion_dos)
-
-print("Suma:", fraccion_uno + fraccion_dos)
-print("Resta:", fraccion_uno - fraccion_dos)
-print("Multiplicación:", fraccion_uno * fraccion_dos)
-print("División:", fraccion_uno / fraccion_dos)
-print("Potencia:", fraccion_uno**2)
-print("Negación:", -fraccion_uno)
-
-print("¿f1 == f2?", fraccion_uno == fraccion_dos)
-print("¿f1 < f2?", fraccion_uno < fraccion_dos)
-print("¿f1 <= f2?", fraccion_uno <= fraccion_dos)
-print("¿f1 > f2?", fraccion_uno > fraccion_dos)
-print("¿f1 >= f2?", fraccion_uno >= fraccion_dos)
-
-print("f1 en decimal:", fraccion_uno.a_decimal())
