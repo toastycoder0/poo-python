@@ -26,6 +26,12 @@ class Producto:
         self.__precio = precio
         self.__stock = 0
 
+    def __str__(self):
+        return f"""Producto: {self.__nombre}
+Precio: ${self.__precio:.2f}
+Stock: {self.__stock}
+"""
+
     @property
     def nombre(self):
         return self.__nombre
@@ -49,3 +55,28 @@ class Producto:
     @stock.setter
     def stock(self, valor):
         self.__stock = valor
+
+    def vender(self, cantidad):
+        self.__stock -= cantidad
+
+    def reabastecer(self, cantidad):
+        self.__stock += cantidad
+
+
+producto_uno = Producto("Macbook Neo", 13999.99, 10)
+producto_dos = Producto("PS5", 11999.99)
+
+print(producto_uno)
+print(producto_dos)
+
+print("Stock del PS5 actualizado a 20\n")
+
+producto_dos.reabastecer(20)
+
+print(producto_dos)
+
+print("Venta de 2 unidades del Macbook Neo\n")
+
+producto_uno.vender(2)
+
+print(producto_uno)
