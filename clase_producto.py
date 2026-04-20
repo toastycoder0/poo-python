@@ -27,10 +27,7 @@ class Producto:
         self.__stock = 0
 
     def __str__(self):
-        return f"""Producto: {self.__nombre}
-Precio: ${self.__precio:.2f}
-Stock: {self.__stock}
-"""
+        return f"Producto: {self.__nombre}\nPrecio: {self.__precio}\nUnidades: {self.__stock}\n"
 
     @property
     def nombre(self):
@@ -57,26 +54,26 @@ Stock: {self.__stock}
         self.__stock = valor
 
     def vender(self, cantidad):
-        self.__stock -= cantidad
+        if cantidad > self.stock:
+            return NotImplemented
+        self.stock -= cantidad
 
     def reabastecer(self, cantidad):
-        self.__stock += cantidad
+        self.stock += cantidad
 
 
-producto_uno = Producto("Macbook Neo", 13999.99, 10)
-producto_dos = Producto("PS5", 11999.99)
+producto_uno = Producto("Consola Sony PlayStation 5 Slim", 8599.00, 25)
+producto_dos = Producto("Consola Nintendo Switch 2", 9132.02)
 
 print(producto_uno)
 print(producto_dos)
 
-print("Stock del PS5 actualizado a 20 unidades disponibles\n")
+print(f"1 unidad vendida de {producto_uno.nombre}")
+producto_uno.vender(1)
 
+print(producto_uno)
+
+print(f"20 unidades agregadas de {producto_dos.nombre}")
 producto_dos.reabastecer(20)
 
 print(producto_dos)
-
-print("Venta de 2 unidades del Macbook Neo\n")
-
-producto_uno.vender(2)
-
-print(producto_uno)
