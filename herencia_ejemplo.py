@@ -1,8 +1,3 @@
-import os
-
-os.system("cls")
-
-
 class Persona:
     def __init__(self, name, aPaterno, aMaterno):
         self._nombre = name
@@ -44,6 +39,7 @@ class Persona:
 class Alumno(Persona):
     def __init__(self, name, aPaterno, aMaterno, career):
         super().__init__(name, aPaterno, aMaterno)
+        # Le estoy hablando al constructor padre
         self._carrera = career
 
     @property
@@ -90,4 +86,3 @@ print(f"Descuento: {alumno1.descontar() * 100}%")
 maestro1 = Maestro("Francisco", "Huerta", "Perez", "Ing. Electronico")
 print(f"Maestro: {maestro1}")
 print(f"Descuento: {maestro1.descontar() * 100}%")
-
