@@ -24,10 +24,6 @@ Crear 3 objetos
 - Un objeto Autobus
 """
 
-import os
-
-os.system("clear")
-
 
 class Vehiculo:
     def __init__(self, matricula, modelo, potencia):
